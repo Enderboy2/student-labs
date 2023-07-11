@@ -6,12 +6,10 @@ type Props = {
 
 function AuthenticationPages({ children }: Props) {
   return (
-    <div>
-      <section className="md:grid md:grid-cols-2">
-        <div className="max-md:hidden">Logo</div>
-        <div>{children}</div>
-      </section>
-    </div>
+    <section className="md:grid md:grid-cols-2 full-height-except-navbar">
+      <div className="max-md:hidden">Logo</div>
+      <div>{children}</div>
+    </section>
   );
 }
 
