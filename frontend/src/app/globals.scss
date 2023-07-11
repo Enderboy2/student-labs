@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  header,
+  section {
+    @apply container px-1 sm:px-10 max-w-screen-2xl;
+  }
+}
+@layer utilities {
+  .prose {
+    max-width: none;
+  }
+}
