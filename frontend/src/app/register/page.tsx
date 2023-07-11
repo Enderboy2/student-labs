@@ -1,4 +1,4 @@
-import AuthenticationPages from "../sections/AuthenticationPages/AuthenticationPages";
+import { AuthenticationPages } from "../sections";
 import Link from "next/link";
 
 function Register() {
