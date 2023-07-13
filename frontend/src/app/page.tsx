@@ -1,10 +1,25 @@
 import Image from "next/image";
 import { Hero } from "./sections";
+import { options } from "./api/auth/[...nextauth]/options";
+import { getServerSession } from "next-auth/next";
+import UserCard from "./components/UserCard"
+import { SessionProvider } from "next-auth/react";
+import { Session } from 'next-auth'
+interface Props {
+  Session: Session | null
+}
 
-export default function Home() {
+const Home: React.FC<Props> = async ({ Session } ) => {
+  const session = await getServerSession(options)
   return (
     <>
-      <Hero />
+      {session ? (
+        <UserCard user={session?.user} pagetype={"Home"}/>
+      ) : (
+        <Hero />
+      )}
     </>
   );
 }
+
+export default Home

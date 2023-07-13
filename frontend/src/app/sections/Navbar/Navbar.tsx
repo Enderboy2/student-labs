@@ -9,6 +9,15 @@ function Navbar() {
         <Link href="/" className="text-xl no-underline normal-case">
           Student Labs
         </Link>
+        <Link href="/client" className="text-xl no-underline normal-case">
+          Client
+        </Link>
+        <Link href="/server" className="text-xl no-underline normal-case">
+          Server
+        </Link>
+        <Link href="/api/auth/signout" className="text-xl no-underline normal-case">
+          SignOut
+        </Link>
       </div>
 
       <Authentication />
